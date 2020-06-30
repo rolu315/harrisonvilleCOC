@@ -40,4 +40,3 @@ function Home() {
 }
 
 export default Home;
-© 2020 GitHub, Inc.
