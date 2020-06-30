@@ -4,7 +4,7 @@ import * as ROUTES from "../constants/routes";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./home/home";
-import GetStartedForm from "./forms/getStartedForm";
+import BibleCorrespondenceCourse from "./forms/bibleCorrespondenceCourse";
 import FormSuccess from "./forms/formSuccess";
 import ErrorForm from "./forms/errorForm";
 import ScrollToTop from "./common/scrollToTop/scrollToTop";

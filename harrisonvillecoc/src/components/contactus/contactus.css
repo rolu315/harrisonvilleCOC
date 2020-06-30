@@ -1,0 +1,22 @@
+  
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #ccc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    background-color: #ccc;
+}
+
+#reCaptchaBox {
+    margin-top: 10px;
+}

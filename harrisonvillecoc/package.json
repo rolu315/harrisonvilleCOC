@@ -6,9 +6,18 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "bootstrap": "^4.5.0",
+    "mdbootstrap": "^4.19.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.1",
+    "react-cookie-consent": "^5.1.2",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-google-recaptcha": "^2.1.0",
+    "react-input-mask": "^2.0.4",
+    "react-scripts": "3.4.1",
+    "react-scroll-up-button": "^1.6.4",
+    "recompose": "^0.30.0",
+    "styled-components": "^5.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
