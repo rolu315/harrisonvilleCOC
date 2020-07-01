@@ -1,5 +1,4 @@
 import React from "react";
-import "./footer.css";
 import ScrollUpButton from "react-scroll-up-button";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter } from "mdbreact";
 
@@ -12,7 +11,7 @@ function Pagefooter() {
 				<MDBRow>
 					<MDBCol md="6">
 						<h5 className="text-uppercase mb-4 mt-3 font-weight-bold">
-							rl3Inspired Technology
+							Harrisonville Church of Christ
 						</h5>
 						<ul className="list-unstyled">
 							<li>

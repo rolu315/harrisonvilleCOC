@@ -8,9 +8,8 @@ import {
 	MDBNavItem,
 	MDBIcon,
 } from "mdbreact";
-import Logo from "../common/images/fav.png";
+import Logo from "../common/images/HarrisonvilleLogo.png";
 import { Nav } from "react-bootstrap";
-import "../header/header.css";
 
 class Pageheader extends React.Component {
 	constructor(props) {

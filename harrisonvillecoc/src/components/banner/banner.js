@@ -1,12 +1,12 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import ChurchBuilding from "../common/images/HarrisonvilleChurchBuilding2.PNG";
+import ChurchBuilding from "../common/images/HarrisonvilleChurchBuilding2.png";
 import BibleStudy from "../common/images/BibleLakeBackground.jpg";
-import ChurchSign from "../common/images/HarrisonvilleChurchSign.PNG";
+import ChurchSign from "../common/images/JohnHurtLessons.jpg";
 import styled, { css } from "styled-components";
 import MediaQuery from "react-responsive";
 
-function CompanyBanner() {
+function Banner() {
 	const StyledImg = styled.img`
 		width: 100%;
 		height: 768px;
@@ -64,4 +64,4 @@ function CompanyBanner() {
 	);
 }
 
-export default CompanyBanner;
+export default Banner;
