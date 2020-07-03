@@ -10,6 +10,7 @@ import CallToAction from "../calltoaction/calltoaction";
 import SectionBreak1 from "../common/sectionBreaks/sectionBreak1";
 import AboutUs from "../aboutus/aboutus";
 import SectionBreak2 from "../common/sectionBreaks/sectionBreak2";
+import ContactUsForm from "../contactus/contactus";
 
 function Home() {
 	return (
@@ -21,6 +22,7 @@ function Home() {
 			<SectionBreak1 />
 			<AboutUs />
 			<SectionBreak2 />
+			<ContactUsForm />
 			<Pagefooter />
 			<CookieConsent>
 				This website uses cookies to enhance the user experience. Visit our
