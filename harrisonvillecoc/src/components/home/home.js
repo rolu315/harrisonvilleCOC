@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 import Banner from "../banner/banner";
 import Announcement from "../announcement/announcement";
 import CallToAction from "../calltoaction/calltoaction";
+import SectionBreak1 from "../common/sectionBreaks/sectionBreak1";
 
 function Home() {
 	return (
@@ -15,6 +16,7 @@ function Home() {
 			<Banner />
 			<Announcement />
 			<CallToAction />
+			<SectionBreak1 />
 			<Pagefooter />
 			<CookieConsent>
 				This website uses cookies to enhance the user experience. Visit our
