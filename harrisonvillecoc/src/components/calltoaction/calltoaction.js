@@ -1,18 +1,14 @@
-  
 import React from "react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 import * as ROUTES from "../../constants/routes";
 import { Card, Button, Container, Col, Row } from "react-bootstrap";
 import styled, { css } from "styled-components";
-import "../announcements/announcements.css";
-import CustomOffice from "../common/images/customOffice.jpg";
-import NativeApps from "../common/images/nativeApplication.jpg";
-import Ecommerce from "../common/images/ecommerce.jpg";
-import WebHosting from "../common/images/webHosting.jpg";
-import Support from "../common/images/support.jpg";
-import QualityAssurance from "../common/images/qualityAssurance.png";
+import "../calltoaction/calltoaction.css";
+import BibleCourses from "../common/images/JohnHurtLessons.jpg";
+import Articles from "../common/images/upcomingEvents.jpg";
+import Sermons from "../common/images/sermonLessons.jpg";
 
-function Announcements() {
+function CallToAction() {
 	const Title = styled.h2`
 		margin-top: 3%;
 		margin-bottom: 3%;
@@ -49,132 +45,72 @@ function Announcements() {
 						<Card>
 							<Card.Img
 								variant="top"
-								src={CustomOffice}
+								src={BibleCourses}
 								alt="man in office chair surrounded by storm troopers"
 							/>
 							<Card.Body>
-								<Card.Title>Custom Website Design</Card.Title>
+								<Card.Title>Bible Correspondence Courses</Card.Title>
 								<Card.Text>
-									rl3Inspired leverages a customized framework to help you
-									achieve your website goals!
+									Complete eight lesson courses covering both Old and New
+									Testaments of the Bible. Complete a simple form and we will
+									snd you the first lesson with a return envelope (we pay the
+									postage). This is a paid service by the members of our
+									congregation.
 									<br />
 									<br />
 								</Card.Text>
 							</Card.Body>
 							<Button
 								id="announcementsBtn"
-								to={ROUTES.GETSTARTED_FORM}
-								as={Link}
-								type="button">
-								Get Started
-							</Button>
-						</Card>
-					</Col>
-					<Col lg={4} sm={12} className="d-flex align-items-stretch">
-						<Card>
-							<Card.Img variant="top" src={WebHosting} />
-							<Card.Body>
-								<Card.Title>Website Audit</Card.Title>
-								<Card.Text>
-									Let our team of experts perform an audit of your website. This
-									will help identify issues preventing your website from
-									achieving traffic goals.
-								</Card.Text>
-							</Card.Body>
-							<Button
-								id="announcementsBtn"
-								to={ROUTES.GETSTARTED_FORM}
-								as={Link}
-								type="button">
-								Get Started
-							</Button>
-						</Card>
-					</Col>
-					<Col lg={4} sm={12} className="d-flex align-items-stretch">
-						<Card>
-							<Card.Img
-								variant="top"
-								src={Ecommerce}
-								alt="laptop computer with network equipment in background"
-							/>
-							<Card.Body>
-								<Card.Title>Ecommerce Websites</Card.Title>
-								<Card.Text>
-									Do you provide products or services to your clients? Our
-									Ecommerce applications are perfect for you!
-								</Card.Text>
-							</Card.Body>
-							<Button
-								id="announcementsBtn"
-								to={ROUTES.GETSTARTED_FORM}
-								as={Link}
-								type="button">
-								Get Started
-							</Button>
-						</Card>
-					</Col>
-				</Row>
-				<Row id="cardRowTwo">
-					<Col lg={4} sm={12} className="d-flex align-items-stretch">
-						<Card>
-							<Card.Img
-								variant="top"
-								src={NativeApps}
-								alt="Man holding a cell phone with apps"
-							/>
-							<Card.Body>
-								<Card.Title>Native Applications</Card.Title>
-								<Card.Text>
-									Do you have a great mobile application idea? We can help you
-									put that idea to work!
-									<br />
-									<br />
-								</Card.Text>
-							</Card.Body>
-							<Button
 								to={ROUTES.GETSTARTED_FORM}
 								as={Link}
 								type="button"
-								id="announcementsBtn">
+							>
 								Get Started
 							</Button>
 						</Card>
 					</Col>
 					<Col lg={4} sm={12} className="d-flex align-items-stretch">
 						<Card>
-							<Card.Img variant="top" src={Support} />
+							<Card.Img variant="top" src={Articles} />
 							<Card.Body>
-								<Card.Title>Maintenance &amp; Support</Card.Title>
+								<Card.Title>Articles</Card.Title>
 								<Card.Text>
-									We offer Maintenance and Support for new websites and for
-									those who may already have their website in place.
+									Bible based articles on a variety of topics written by members
+									of the church of Christ.
+								</Card.Text>
+							</Card.Body>
+							<Button
+								id="articles"
+								to={ROUTES.GETSTARTED_FORM}
+								as={Link}
+								type="button"
+							>
+								Get Started
+							</Button>
+						</Card>
+					</Col>
+					<Col lg={4} sm={12} className="d-flex align-items-stretch">
+						<Card>
+							<Card.Img
+								variant="top"
+								src={Sermons}
+								alt="laptop computer with network equipment in background"
+							/>
+							<Card.Body>
+								<Card.Title>Sermons</Card.Title>
+								<Card.Text>
+									Listen to sermons presented by our preacher and other men of
+									our congregation. Written articles addressing important Bible
+									topics that affect all of us today!
 								</Card.Text>
 							</Card.Body>
 							<Button
 								id="announcementsBtn"
 								to={ROUTES.GETSTARTED_FORM}
 								as={Link}
-								type="button">
-								Get Started
-							</Button>
-						</Card>
-					</Col>
-					<Col lg={4} sm={12} className="d-flex align-items-stretch">
-						<Card>
-							<Card.Img variant="top" src={QualityAssurance} />
-							<Card.Body>
-								<Card.Title>Quality Assurance</Card.Title>
-								<Card.Text>
-									Whether it is a small or large project, rl3Inspired can handle
-									your Software Quality Engineering. We have automated
-									solutions!
-								</Card.Text>
-							</Card.Body>
-							<Button
-								id="announcementsBtn_6"
-								to={ROUTES.GETSTARTED_FORM}
-								as={Link}
-								type="button">
+								type="button"
+							>
 								Get Started
 							</Button>
 						</Card>
@@ -185,4 +121,4 @@ function Announcements() {
 	);
 }
 
-export default Announcements;
+export default CallToAction;
