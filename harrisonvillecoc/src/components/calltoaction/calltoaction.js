@@ -15,6 +15,10 @@ function CallToAction() {
 		font-weight: bolder;
 		text-decoration: underline;
 	`;
+	const BulletPoints = styled.li`
+		list-style-type: none;
+	`;
+	const UnorderedList = styled.ul``;
 
 	const BodyText = styled.p`
 		margin-bottom: 5%;
@@ -29,15 +33,13 @@ function CallToAction() {
 		<div className="container" id="upcomingContainer">
 			<Title>Our Worship Services</Title>
 			<BodyText>
-				<strong>rl3Inspired doesn't do "websites".</strong>
-				<br /> We provide website and app solutions for a variety of different
-				businesses.
-				<br /> Our goal is to provide the best user experience for all your
-				needs. <br />
-				ADA compliance and Website Security are our top priorities for all our
-				partners! <br />
-				Let us know how we can serve your business or non-profit organization
-				today!
+				<strong>Our Service Times:</strong>
+				<UnorderedList>
+					<BulletPoints>9:30 a.m. Sunday Morning Bible Study</BulletPoints>
+					<BulletPoints>10:30 a.m. Sunday Morning Worship</BulletPoints>
+					<BulletPoints>2:00 p.m. Sunday Afternoon Worship</BulletPoints>
+					<BulletPoints>7:00 p.m. Wednesday Night Bible Study</BulletPoints>
+				</UnorderedList>
 			</BodyText>
 			<Container>
 				<Row id="cardRowOne">
