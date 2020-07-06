@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { Button, Row } from "react-bootstrap";
 import styled, { css } from "styled-components";
+import "./contactus.css";
 import * as firebase from "firebase";
-import "firebase/auth";
 import "firebase/database";
-import Firebase from "../firebase/firebaseConfig";
-import "./contactForm.css";
+import Firebase from "../firebase/firebase";
 import * as ROUTES from "../../constants/routes";
 import { withRouter } from "react-router";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -46,7 +45,7 @@ const INITIAL_STATE = {
 	email: "",
 	subject: "",
 	message: "",
-	error: null
+	error: null,
 };
 const recaptchaRef = React.createRef();
 
@@ -60,7 +59,7 @@ class ContactForm extends Component {
 		this.state = { ...INITIAL_STATE, isVerified: false };
 	}
 
-	onSubmit = event => {
+	onSubmit = (event) => {
 		if (this.state.isVerified) {
 			event.preventDefault();
 			const { fullName, email, subject, message, error } = this.state;
@@ -71,7 +70,7 @@ class ContactForm extends Component {
 					fullName: fullName,
 					email: email,
 					subject: subject,
-					message: message
+					message: message,
 				})
 				.then(() => {
 					(window.location = "/formSuccess").this
@@ -87,11 +86,11 @@ class ContactForm extends Component {
 	verifyCallback(response) {
 		if (response) {
 			this.setState({
-				isVerified: true
+				isVerified: true,
 			});
 		}
 	}
-	onChange = event => {
+	onChange = (event) => {
 		this.setState({ [event.target.name]: event.target.value });
 	};
 	render() {
@@ -101,19 +100,14 @@ class ContactForm extends Component {
 		return (
 			<Wrapper>
 				<Title id="contactForm">Let's Get In Touch</Title>
-				<SubTitle>
-					We promise you won't talk to a robot! <br />
-				</SubTitle>
 				<Row>
 					<div className="col-md-2"></div>
 					<div className="col-md-8 col-xs-12">
 						<BodyText>
-							Whenever you contact us we promise to answer you with a real
-							person. No more waiting onhold or having your email go into the
-							abyss. When you call...we listen. If you go to voicemail, your
-							call is returned not sent into a dark void waiting for a customer
-							service representative to pick it up in a queue. rl3Inspired is
-							about solving real problems using real people.
+							Our congregation is looking forward to hearing from you! Whether
+							it is a prayer request, a Bible study you are looking for or any
+							reason, please fill out this simple form and we will contact you
+							as soon as it is possible. Thank you!
 						</BodyText>
 					</div>
 				</Row>
