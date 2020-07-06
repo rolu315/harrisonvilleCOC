@@ -6,7 +6,8 @@ function Pagefooter() {
 	return (
 		<MDBFooter
 			color="stylish-color-dark"
-			className="page-footer font-small pt-4 mt-4">
+			className="page-footer font-small pt-4 mt-4"
+		>
 			<MDBContainer fluid className="text-center text-md-left">
 				<MDBRow>
 					<MDBCol md="6">
@@ -15,11 +16,18 @@ function Pagefooter() {
 						</h5>
 						<ul className="list-unstyled">
 							<li>
-								<a href="tel:1-816-745-0489">816-745-0489</a>
+								<a href="tel:1-816-887-5857">816-887-5857</a>
 							</li>
 							<li>
-								<a href="mailto: robert@rl3inspired.com">
-									robert@rl3Inspired.com
+								<a href="https://goo.gl/maps/r7P5HuPSmdFvyEF98">
+									27713 MO-7
+									<br />
+									Harrisonville, MO 64701
+								</a>
+							</li>
+							<li>
+								<a href="mailto: office@harrisonvilleCOC.com">
+									office@harrisonvilleCOC.com
 								</a>
 							</li>
 						</ul>
@@ -29,19 +37,22 @@ function Pagefooter() {
 						<h5 className="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
 						<ul className="list-unstyled">
 							<li>
-								<a href="#upcomingContainer">What We Do</a>
+								<a href="#upcomingContainer">Services</a>
 							</li>
 							<li>
-								<a href="#ourProjects">Projects</a>
+								<a href="#aboutUs">About Us</a>
 							</li>
 							<li>
-								<a href="#feedback">Feedback</a>
+								<a href="/articles">Articles</a>
 							</li>
 							<li>
-								<a href="#contactForm">Let's Talk!</a>
+								<a href="#contactForm">Let's Talk</a>
 							</li>
 							<li>
 								<a href="/privacyPolicy">Privacy Policy</a>
+							</li>
+							<li>
+								<a href="/getStartedForm">Bible Correspondence Course</a>
 							</li>
 						</ul>
 					</MDBCol>
@@ -69,7 +80,8 @@ function Pagefooter() {
 							className="btn-floating btn-sm btn-instagram mx-1"
 							href="https://www.instagram.com/robertlukenbill"
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							<i className="fab fa-instagram"> </i>
 						</a>
 					</li>
@@ -78,7 +90,8 @@ function Pagefooter() {
 							className="btn-floating btn-sm btn-tw mx-1"
 							href="https://www.twitter.com/rl3inspired"
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							<i className="fab fa-twitter"> </i>
 						</a>
 					</li>
@@ -87,7 +100,8 @@ function Pagefooter() {
 							className="btn-floating btn-sm btn-fb mx-1"
 							href="https://www.facebook.com"
 							target="_blank"
-							rel="noopener noreferrer">
+							rel="noopener noreferrer"
+						>
 							<i className="fab fa-facebook-f"> </i>
 						</a>
 					</li>
