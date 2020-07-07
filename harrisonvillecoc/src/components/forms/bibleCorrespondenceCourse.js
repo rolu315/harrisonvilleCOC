@@ -6,6 +6,8 @@ import "firebase/database";
 import Firebase from "../firebase/firebase";
 import styled, { css } from "styled-components";
 import InputMask from "react-input-mask";
+import Pageheader from "../header/header";
+import Pagefooter from "../footer/footer";
 
 import {
 	MDBNavbar,
@@ -18,7 +20,6 @@ import {
 } from "mdbreact";
 
 const Wrapper = styled.section`
-	padding-bottom: 3%;
 	padding-top: 3%;
 	text-align: center;
 `;
@@ -145,6 +146,7 @@ class BibleCorrespondenceCourse extends Component {
 				</header>
 
 				<Wrapper>
+					<Pageheader />
 					<Title id="contactForm">Tell us about your dream!</Title>
 					<Row className="formData text-left">
 						<div className="col-md-3"></div>
@@ -338,6 +340,7 @@ class BibleCorrespondenceCourse extends Component {
 							</Button>
 						</FormData>
 					</Row>
+					<Pagefooter />
 				</Wrapper>
 			</div>
 		);
