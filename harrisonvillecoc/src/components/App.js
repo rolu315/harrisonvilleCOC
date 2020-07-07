@@ -4,14 +4,18 @@ import * as ROUTES from "../constants/routes";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./home/home";
+import BibleCorrespondenceCourse from "./forms/bibleCorrespondenceCourse";
 
 function App() {
 	return (
 		<Router>
 			<div className="App">
 				<Route exact path={ROUTES.HOME} component={Home} />
-				{/* <Route path={ROUTES.GETSTARTED_FORM} component={GetStartedForm} />
-				<Route path={ROUTES.FORM_SUCCESS} component={FormSuccess} />
+				<Route
+					path={ROUTES.BIBLE_CORRESPONDENCE_COURSE}
+					component={BibleCorrespondenceCourse}
+				/>
+				{/* <Route path={ROUTES.FORM_SUCCESS} component={FormSuccess} />
 				<Route path={ROUTES.FORM_ERROR} component={ErrorForm} />
 				<Route path={ROUTES.BUGREPORTING} component={BugReportingForm} />
 				<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} /> */}

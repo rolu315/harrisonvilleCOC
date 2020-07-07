@@ -1,0 +1,56 @@
+#formContainer {
+	/* background-image: url("../common/images/kcSkyline.jpg"); */
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	padding-top: 3%;
+}
+
+input[type="checkbox"] {
+	vertical-align: middle;
+	position: relative;
+	bottom: 1px;
+}
+
+label {
+	padding-top: 4%;
+}
+
+#checkBoxOptions label {
+	padding-top: 1%;
+}
+
+@media (max-width: 812px) {
+	.navbar {
+		display: none !important;
+	}
+
+	#formContainer {
+		background-image: none !important;
+		background-color: #87ceeb;
+	}
+
+	input[type="checkbox"] {
+		vertical-align: middle;
+		position: relative;
+		top: 2px;
+	}
+}
+
+label#companyNameInputLabel,
+label#emailInputLabel,
+label#contactNameInputLabel,
+label#contactPhoneInputLabel,
+label#perfectWebsiteInputLabel {
+	font-weight: bold;
+}
+
+label#companyNameInputLabel:after,
+label#emailInputLabel:after,
+label#contactNameInputLabel:after,
+label#contactPhoneInputLabel:after,
+label#perfectWebsiteInputLabel:after {
+	color: #e32;
+	content: " *";
+	display: inline;
+}

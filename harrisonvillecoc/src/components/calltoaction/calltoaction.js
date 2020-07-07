@@ -64,7 +64,7 @@ function CallToAction() {
 							</Card.Body>
 							<Button
 								id="announcementsBtn"
-								to={ROUTES.GETSTARTED_FORM}
+								to={ROUTES.BIBLE_CORRESPONDENCE_COURSE}
 								as={Link}
 								type="button"
 							>
@@ -84,7 +84,7 @@ function CallToAction() {
 							</Card.Body>
 							<Button
 								id="articles"
-								to={ROUTES.GETSTARTED_FORM}
+								to={ROUTES.BIBLE_CORRESPONDENCE_COURSE}
 								as={Link}
 								type="button"
 							>
@@ -109,7 +109,7 @@ function CallToAction() {
 							</Card.Body>
 							<Button
 								id="announcementsBtn"
-								to={ROUTES.GETSTARTED_FORM}
+								to={ROUTES.BIBLE_CORRESPONDENCE_COURSE}
 								as={Link}
 								type="button"
 							>
