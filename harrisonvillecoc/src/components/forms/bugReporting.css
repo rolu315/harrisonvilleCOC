@@ -1,0 +1,17 @@
+label#issueDescriptionInputLabel,
+label#browserInputLabel,
+label#urlInputLabel,
+label#occurrenceSectionInputLabel,
+label#errorDescriptionInputLabel {
+	font-weight: bold;
+}
+
+label#issueDescriptionInputLabel:after,
+label#browserInputLabel:after,
+label#urlInputLabel:after,
+label#occurrenceSectionInputLabel:after,
+label#errorDescriptionInputLabel:after {
+	color: #e32;
+	content: " *";
+	display: inline;
+}
