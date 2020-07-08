@@ -48,9 +48,9 @@ class Pageheader extends React.Component {
 									<Nav.Link id="home" href="/#sectionBreak1JumboTron">
 										Home
 									</Nav.Link>
-									<Nav.Link href="/#ourProjects">Service Times</Nav.Link>
-									<Nav.Link href="/#ourTeam">About Us</Nav.Link>
-									<Nav.Link href="/#feedback">Articles</Nav.Link>
+									<Nav.Link href="/#upcomingContainer">Service Times</Nav.Link>
+									<Nav.Link href="/#aboutUs">About Us</Nav.Link>
+									<Nav.Link href="/articles">Articles</Nav.Link>
 									<Nav.Link href="/#contactForm">Let's Talk!</Nav.Link>
 								</Nav>
 							</MDBNavbarNav>

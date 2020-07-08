@@ -26,7 +26,7 @@ function AboutUs() {
 	`;
 
 	return (
-		<Container id="upcomingContainer">
+		<Container id="aboutUs">
 			<Img src={AboutUsImg} alt="Man in suit holding About Us sign" />
 			<BodyText>
 				We believe the easiest, most brief and scriptural way to introduce the
