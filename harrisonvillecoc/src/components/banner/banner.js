@@ -2,7 +2,7 @@ import React from "react";
 import Carousel from "react-bootstrap/Carousel";
 import ChurchBuilding from "../common/images/HarrisonvilleChurchBuilding2.png";
 import BibleStudy from "../common/images/BibleLakeBackground.jpg";
-import ChurchSign from "../common/images/JohnHurtLessons.jpg";
+import John424Scripture from "../common/images/john424Scripture.png";
 import styled, { css } from "styled-components";
 import MediaQuery from "react-responsive";
 
@@ -53,8 +53,8 @@ function Banner() {
 
 						<Carousel.Item>
 							<StyledImg
-								src={ChurchSign}
-								alt="Harrisonville Church of Christ Sign"
+								src={John424Scripture}
+								alt="John 4:24 Scripture from the Bible"
 							/>
 						</Carousel.Item>
 					</Carousel>

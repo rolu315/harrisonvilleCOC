@@ -17,6 +17,7 @@
     "react-google-recaptcha": "^2.1.0",
     "react-input-mask": "^2.0.4",
     "react-responsive": "^8.1.0",
+    "react-router": "^5.2.0",
     "react-scripts": "3.4.1",
     "react-scroll-up-button": "^1.6.4",
     "recompose": "^0.30.0",

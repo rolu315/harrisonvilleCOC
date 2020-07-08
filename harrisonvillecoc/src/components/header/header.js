@@ -54,32 +54,6 @@ class Pageheader extends React.Component {
 									<Nav.Link href="/#contactForm">Let's Talk!</Nav.Link>
 								</Nav>
 							</MDBNavbarNav>
-							<MDBNavbarNav right id="socialMediaIcons">
-								<MDBNavItem>
-									<Nav.Link
-										href="https://instagram.com/robertlukenbill"
-										target="_blank"
-										rel="noopener noreferrer">
-										<MDBIcon fab icon="instagram" />
-									</Nav.Link>
-								</MDBNavItem>
-								<MDBNavItem>
-									<Nav.Link
-										href="https://twitter.com/rl3inspired"
-										target="_blank"
-										rel="noopener noreferrer">
-										<MDBIcon fab icon="twitter" />
-									</Nav.Link>
-								</MDBNavItem>
-								<MDBNavItem>
-									<Nav.Link
-										href="https://facebook.com"
-										target="_blank"
-										rel="noopener noreferrer">
-										<MDBIcon fab icon="facebook-f" />
-									</Nav.Link>
-								</MDBNavItem>
-							</MDBNavbarNav>
 						</MDBCollapse>
 					</MDBNavbar>
 				</header>

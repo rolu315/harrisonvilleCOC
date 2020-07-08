@@ -9,21 +9,24 @@ import ErrorForm from "./forms/errorForm";
 import FormSuccess from "./forms/successForm";
 import BugReportingForm from "./forms/bugReporting";
 import PrivacyPolicy from "./common/privacyPolicy/privacyPolicy";
+import ScrollToTop from "./common/scrollToTop/scrollToTop";
 
 function App() {
 	return (
 		<Router>
-			<div className="App">
-				<Route exact path={ROUTES.HOME} component={Home} />
-				<Route
-					path={ROUTES.BIBLE_CORRESPONDENCE_COURSE}
-					component={BibleCorrespondenceCourse}
-				/>
-				<Route path={ROUTES.FORM_ERROR} component={ErrorForm} />
-				<Route path={ROUTES.FORM_SUCCESS} component={FormSuccess} />
-				<Route path={ROUTES.BUGREPORTING} component={BugReportingForm} />
-				<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} />
-			</div>
+			<ScrollToTop>
+				<div className="App">
+					<Route exact path={ROUTES.HOME} component={Home} />
+					<Route
+						path={ROUTES.BIBLE_CORRESPONDENCE_COURSE}
+						component={BibleCorrespondenceCourse}
+					/>
+					<Route path={ROUTES.FORM_ERROR} component={ErrorForm} />
+					<Route path={ROUTES.FORM_SUCCESS} component={FormSuccess} />
+					<Route path={ROUTES.BUGREPORTING} component={BugReportingForm} />
+					<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} />
+				</div>
+			</ScrollToTop>
 		</Router>
 	);
 }
