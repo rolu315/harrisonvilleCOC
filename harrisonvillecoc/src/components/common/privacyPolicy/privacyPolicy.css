@@ -1,0 +1,10 @@
+#privacyPolicyPage {
+	text-align: left !important;
+	margin: 5% !important;
+}
+
+@media (max-width: 1024px) {
+	#privacyPolicyPage {
+		padding-top: 15% !important;
+	}
+}

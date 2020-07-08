@@ -8,6 +8,7 @@ import BibleCorrespondenceCourse from "./forms/bibleCorrespondenceCourse";
 import ErrorForm from "./forms/errorForm";
 import FormSuccess from "./forms/successForm";
 import BugReportingForm from "./forms/bugReporting";
+import PrivacyPolicy from "./common/privacyPolicy/privacyPolicy";
 
 function App() {
 	return (
@@ -21,10 +22,7 @@ function App() {
 				<Route path={ROUTES.FORM_ERROR} component={ErrorForm} />
 				<Route path={ROUTES.FORM_SUCCESS} component={FormSuccess} />
 				<Route path={ROUTES.BUGREPORTING} component={BugReportingForm} />
-				{/* 
-				
-				
-				<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} /> */}
+				<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} />
 			</div>
 		</Router>
 	);
