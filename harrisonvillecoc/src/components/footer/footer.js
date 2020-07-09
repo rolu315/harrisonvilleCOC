@@ -37,10 +37,10 @@ function Pagefooter() {
 						<h5 className="text-uppercase mb-4 mt-3 font-weight-bold">Links</h5>
 						<ul className="list-unstyled">
 							<li>
-								<a href="#upcomingContainer">Services</a>
+								<a href="/#upcomingContainer">Services</a>
 							</li>
 							<li>
-								<a href="#aboutUs">About Us</a>
+								<a href="/#aboutUs">About Us</a>
 							</li>
 							<li>
 								<a href="/articles">Articles</a>
@@ -52,7 +52,7 @@ function Pagefooter() {
 								<a href="/privacyPolicy">Privacy Policy</a>
 							</li>
 							<li>
-								<a href="/getStartedForm">Bible Correspondence Course</a>
+								<a href="/bibleCorrespondenceCourse">Bible Correspondence Course</a>
 							</li>
 						</ul>
 					</MDBCol>
@@ -68,41 +68,6 @@ function Pagefooter() {
 					<li className="list-inline-item">
 						<a href="/bugReporting" className="btn btn-danger btn-rounded">
 							Bug Reporting
-						</a>
-					</li>
-				</ul>
-			</div>
-			<hr />
-			<div className="text-center">
-				<ul className="list-unstyled list-inline">
-					<li className="list-inline-item">
-						<a
-							className="btn-floating btn-sm btn-instagram mx-1"
-							href="https://www.instagram.com/robertlukenbill"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<i className="fab fa-instagram"> </i>
-						</a>
-					</li>
-					<li className="list-inline-item">
-						<a
-							className="btn-floating btn-sm btn-tw mx-1"
-							href="https://www.twitter.com/rl3inspired"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<i className="fab fa-twitter"> </i>
-						</a>
-					</li>
-					<li className="list-inline-item">
-						<a
-							className="btn-floating btn-sm btn-fb mx-1"
-							href="https://www.facebook.com"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<i className="fab fa-facebook-f"> </i>
 						</a>
 					</li>
 				</ul>
