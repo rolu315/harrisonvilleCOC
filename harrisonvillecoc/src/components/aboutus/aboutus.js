@@ -37,7 +37,7 @@ function AboutUs() {
 				all, and through all, and in you all (KJV).
 			</BodyText>
 			<BodyText>
-				As a congregation, we are string to keep the unity of the Spirit, in the
+				As a congregation, we are striving to keep the unity of the Spirit, in the
 				bond of peace. We believe (as stated) there is one body, and that body
 				is the church. Paul used the term "body" in Ephesians 4:16 to describe
 				the church. He also said God made Christ the head of the church, which
