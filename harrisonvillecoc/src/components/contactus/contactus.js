@@ -151,7 +151,8 @@ class ContactForm extends Component {
 						<ReCAPTCHA
 							className="d-flex justify-content-center"
 							id="reCaptchaBox"
-							sitekey="6LdpzOMUAAAAAMGrN85HbH9q-41RSAxtgvcRLdzU"
+							sitekey="6LfLlK8ZAAAAAHPHgHC5TNesn1vEaN-hRM1BkY3C"
+							secretkey="6LfLlK8ZAAAAAD83mKAkNp8_epMtM0tEeEEnOQgo"
 							render="explicit"
 							onChange={this.verifyCallback}
 						/>
