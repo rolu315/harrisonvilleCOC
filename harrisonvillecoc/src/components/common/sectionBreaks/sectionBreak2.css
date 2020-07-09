@@ -1,2 +1,39 @@
-#sectionBreak2 {
+@media (max-width: 1024px) {
+    #sectionBreak2Title {
+        font-size: 2em;
+    }
+    #sectionBreak2SubTitle{
+        font-size: 1.5em;
+        margin-top: 10%;
+    }
+    #sectionBreak2Button{
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 400px) {
+    #sectionBreak2Title {
+        font-size: 2em;
+    }
+    #sectionBreak2SubTitle{
+        font-size: 1.5em;
+        margin-top: 10%;
+    }
+    #sectionBreak2Button{
+        margin-top: 15%;
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #sectionBreak2Title {
+        font-size: 2em;
+    }
+    #sectionBreak2SubTitle{
+        font-size: 1.5em;
+        margin-top: 10%;
+    }
+    #sectionBreak2Button{
+        margin-top: 10%;
+    }
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 import mountains from "../images/mountainScene.jpg";
-import { button } from "mdbreact";
+import "./sectionBreak2.css";
 
 function SectionBreak2() {
 	const SubTitle = styled.h3`
@@ -33,12 +33,12 @@ function SectionBreak2() {
 
 	return (
 		<Wrapper id="sectionBreak2">
-			<Title>
+			<Title id="sectionBreak2Title">
 				"Jesus saith unto him, I am the way, the truth, and the life: no man
 				cometh unto the Father, but by me (John 14:6, KJV).""
 			</Title>
-			<SubTitle>Will you let Jesus be your way in life?</SubTitle>
-			<button className="btn btn-primary" onClick={handleClick}>
+			<SubTitle id="sectionBreak2SubTitle">Will you let Jesus be your way in life?</SubTitle>
+			<button id="sectionBreak2Button" className="btn btn-primary" onClick={handleClick}>
 				Let's Talk
 			</button>
 		</Wrapper>
