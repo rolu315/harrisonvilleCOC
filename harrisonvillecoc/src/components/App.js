@@ -10,6 +10,7 @@ import FormSuccess from "./forms/successForm";
 import BugReportingForm from "./forms/bugReporting";
 import PrivacyPolicy from "./common/privacyPolicy/privacyPolicy";
 import ScrollToTop from "./common/scrollToTop/scrollToTop";
+import Articles from "./articles/articles";
 
 function App() {
 	return (
@@ -25,6 +26,7 @@ function App() {
 					<Route path={ROUTES.FORM_SUCCESS} component={FormSuccess} />
 					<Route path={ROUTES.BUGREPORTING} component={BugReportingForm} />
 					<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} />
+					<Route path={ROUTES.ARTICLES} component={Articles} />
 				</div>
 			</ScrollToTop>
 		</Router>
