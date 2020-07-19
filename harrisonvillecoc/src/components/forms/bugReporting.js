@@ -4,7 +4,7 @@ import * as firebase from "firebase";
 import "firebase/database";
 import Firebase from "../firebase/firebase";
 import styled from "styled-components";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import {
 	MDBNavbar,
 	MDBNavbarBrand,
@@ -46,13 +46,15 @@ const INITIAL_STATE = {
 	email: "",
 	error: null,
 };
-
+const recaptchaRef = React.createRef();
 var db = firebase.firestore();
 
 class BugReportingForm extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { ...INITIAL_STATE };
+		this.onSubmit = this.onSubmit.bind(this);
+		this.verifyCallback = this.verifyCallback.bind(this);
+		this.state = { ...INITIAL_STATE, isVerified: false };
 	}
 
 	onSubmit = (event) => {
