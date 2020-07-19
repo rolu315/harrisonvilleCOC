@@ -58,38 +58,51 @@ class BugReportingForm extends Component {
 	}
 
 	onSubmit = (event) => {
-		event.preventDefault();
-		const {
-			issueDescription,
-			url,
-			browser,
-			submittedBy,
-			submittedDate,
-			errorMessage,
-			occurrenceSection,
-			errorDescription,
-			email,
-		} = this.state;
-		let formID = errorDescription;
-		db.collection("formBugReporting")
-			.doc(formID)
-			.set({
-				issueDescription: issueDescription,
-				url: url,
-				browser: browser,
-				submittedBy: submittedBy,
-				submittedDate: submittedDate,
-				errorMessage: errorMessage,
-				occurrenceSection: occurrenceSection,
-				errorDescription: errorDescription,
-				email: email,
-			})
-			.then(() => {
-				(window.location = "/formSuccess").this
-					.setstate({ ...INITIAL_STATE })
-					.catch((window.location = "/formError"));
-			});
+		if (this.state.isVerified) {
+			event.preventDefault();
+			const {
+				issueDescription,
+				url,
+				browser,
+				submittedBy,
+				submittedDate,
+				errorMessage,
+				occurrenceSection,
+				errorDescription,
+				email,
+			} = this.state;
+			let formID = errorDescription;
+			db.collection("formBugReporting")
+				.doc(formID)
+				.set({
+					issueDescription: issueDescription,
+					url: url,
+					browser: browser,
+					submittedBy: submittedBy,
+					submittedDate: submittedDate,
+					errorMessage: errorMessage,
+					occurrenceSection: occurrenceSection,
+					errorDescription: errorDescription,
+					email: email,
+				})
+				.then(() => {
+					(window.location = "/formSuccess").this
+						.setstate({ ...INITIAL_STATE })
+						.catch((window.location = "/formError"))
+				});
+			const recaptchaValue = recaptchaRef.current.getValue();
+			this.props.onSubmit(recaptchaValue);
+		} else {
+			alert("Please verifiy that you are a human!");
+		}
 	};
+	verifyCallback(response) {
+		if (response) {
+			this.setState({
+				isVerified: true,
+			});
+		}
+	}
 
 	onChange = (event) => {
 		this.setState({ [event.target.name]: event.target.value });
@@ -299,6 +312,14 @@ class BugReportingForm extends Component {
 								name="submittedBy"
 								value={submittedBy}
 								onChange={this.onChange}
+							/>
+							<ReCAPTCHA
+								className="d-flex justify-content-left"
+								id="reCaptchaBox"
+								sitekey="6LfLlK8ZAAAAAHPHgHC5TNesn1vEaN-hRM1BkY3C"
+								secretkey="6LfLlK8ZAAAAAD83mKAkNp8_epMtM0tEeEEnOQgo"
+								render="explicit"
+								onChange={this.verifyCallback}
 							/>
 							<Button disabled={isInvalid} type="submit">
 								Submit

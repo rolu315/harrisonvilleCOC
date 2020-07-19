@@ -8,7 +8,7 @@ const gmailPassword = functions.config().gmail.password;
 admin.initializeApp()
 
 
-var transporter = nodemailer.createTransport({
+let transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
     secure: true,
@@ -24,7 +24,7 @@ exports.contactUsEmail = functions.firestore
     .onCreate((snap, context) => {
 
         const mailOptions = {
-            from: `harrisonvillecoc@gmail.com`,
+            from: `churchoffice@harrisonvillechurchofchrist.org`,
             to: snap.data().email,
             subject: 'Contact Form Email Feedback',
             html: `<h1>New Contact Form Email Feedback</h1>
@@ -50,7 +50,7 @@ exports.bibleCourseEmail = functions.firestore
     .onCreate((snap, context) => {
 
         const mailOptions = {
-            from: `harrisonvillecoc@gmail.com`,
+            from: `churchoffice@harrisonvillechurchofchrist.org`,
             to: snap.data().email,
             subject: 'Bible Correspondence Email Feedback',
             html: `<h1>New Bible Correspondence Course </h1>
@@ -80,7 +80,7 @@ exports.bugReportingEmail = functions.firestore
     .onCreate((snap, context) => {
 
         const mailOptions = {
-            from: `harrisonvillecoc@gmail.com`,
+            from: `churchoffice@harrisonvillechurchofchrist.org`,
             to: snap.data().email,
             subject: 'Bug Reporting Feedback',
             html: `<h1>New Bug Reporting Feedback </h1>

@@ -26,8 +26,8 @@ function Pagefooter() {
 								</a>
 							</li>
 							<li>
-								<a href="mailto: office@harrisonvilleCOC.com">
-									office@harrisonvilleCOC.com
+								<a href="mailto: churchoffice@harrisonvillechurchofchrist.org">
+									churchoffice@harrisonvillechurchofchrist.org
 								</a>
 							</li>
 						</ul>
