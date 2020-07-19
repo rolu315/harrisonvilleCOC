@@ -144,10 +144,6 @@ class ContactForm extends Component {
 							type="message"
 							placeholder="Message"
 						/>
-						<Button disabled={isInvalid} type="submit">
-							Submit
-						</Button>
-						{error && <p>{error.message}</p>}
 						<ReCAPTCHA
 							className="d-flex justify-content-center"
 							id="reCaptchaBox"
@@ -156,6 +152,10 @@ class ContactForm extends Component {
 							render="explicit"
 							onChange={this.verifyCallback}
 						/>
+						<Button disabled={isInvalid} type="submit">
+							Submit
+						</Button>
+						{error && <p>{error.message}</p>}
 					</FormData>
 				</Row>
 			</Wrapper>

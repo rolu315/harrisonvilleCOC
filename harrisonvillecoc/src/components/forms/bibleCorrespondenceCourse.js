@@ -8,7 +8,7 @@ import styled, { css } from "styled-components";
 import InputMask from "react-input-mask";
 import Pageheader from "../header/header";
 import Pagefooter from "../footer/footer";
-
+import ReCAPTCHA from "react-google-recaptcha";
 import {
 	MDBNavbar,
 	MDBNavbarBrand,
@@ -48,47 +48,62 @@ const INITIAL_STATE = {
 	comments: "",
 	error: null,
 };
+const recaptchaRef = React.createRef();
 
 var db = firebase.firestore();
 
 class BibleCorrespondenceCourse extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { ...INITIAL_STATE };
+		this.onSubmit = this.onSubmit.bind(this);
+		this.verifyCallback = this.verifyCallback.bind(this);
+		this.state = { ...INITIAL_STATE, isVerified: false };
 	}
 
 	onSubmit = (event) => {
-		event.preventDefault();
-		const {
-			fullName,
-			email,
-			streetAddress,
-			city,
-			state,
-			zip,
-			phoneNumber,
-			comments,
-		} = this.state;
-		let formID = fullName;
-		db.collection("bibleCourses")
-			.doc(formID)
-			.set({
-				fullName: fullName,
-				email: email,
-				streetAddress: streetAddress,
-				city: city,
-				state: state,
-				zip: zip,
-				phoneNumber: phoneNumber,
-				comments: comments,
-			})
-			.then(
-				(window.location = "/formSuccess").this.setstate({ ...INITIAL_STATE })
-			)
-			.catch((window.location = "/formError"))
-			.this.setstate({ ...INITIAL_STATE });
+		if (this.state.isVerified) {
+			event.preventDefault();
+			const {
+				fullName,
+				email,
+				streetAddress,
+				city,
+				state,
+				zip,
+				phoneNumber,
+				comments,
+			} = this.state;
+			let formID = fullName;
+			db.collection("bibleCourses")
+				.doc(formID)
+				.set({
+					fullName: fullName,
+					email: email,
+					streetAddress: streetAddress,
+					city: city,
+					state: state,
+					zip: zip,
+					phoneNumber: phoneNumber,
+					comments: comments,
+				})
+				.then(() => {
+					(window.location = "/formSuccess").this
+						.setstate({ ...INITIAL_STATE })
+						.catch((window.location = "/formError"))
+				});
+			const recaptchaValue = recaptchaRef.current.getValue();
+			this.props.onSubmit(recaptchaValue);
+		} else {
+			alert("Please verifiy that you are a human!");
+		}
 	};
-
+	verifyCallback(response) {
+		if (response) {
+			this.setState({
+				isVerified: true,
+			});
+		}
+	}
 	onChange = (event) => {
 		this.setState({ [event.target.name]: event.target.value });
 	};
@@ -147,7 +162,7 @@ class BibleCorrespondenceCourse extends Component {
 
 				<Wrapper>
 					<Pageheader />
-					<Title id="contactForm">Tell us about your dream!</Title>
+					<Title id="contactForm">Request Bible Correspondance Course</Title>
 					<Row className="formData text-left">
 						<div className="col-md-3"></div>
 						<FormData className="col-md-6 col-xs-12" onSubmit={this.onSubmit}>
@@ -261,7 +276,7 @@ class BibleCorrespondenceCourse extends Component {
 							</label>
 							<InputMask
 								{...this.props}
-								mask="99999-9999"
+								mask="99999"
 								maskChar={null}
 								type="text"
 								inputMode="numeric"
@@ -325,6 +340,14 @@ class BibleCorrespondenceCourse extends Component {
 								value={comments}
 								onChange={this.onChange}
 							/>
+							<ReCAPTCHA
+								className="d-flex justify-content-left"
+								id="reCaptchaBox"
+								sitekey="6LfLlK8ZAAAAAHPHgHC5TNesn1vEaN-hRM1BkY3C"
+								secretkey="6LfLlK8ZAAAAAD83mKAkNp8_epMtM0tEeEEnOQgo"
+								render="explicit"
+								onChange={this.verifyCallback}
+							/>
 							<Button disabled={isInvalid} type="submit">
 								Submit
 							</Button>
@@ -338,6 +361,7 @@ class BibleCorrespondenceCourse extends Component {
 							>
 								Cancel
 							</Button>
+
 						</FormData>
 					</Row>
 					<Pagefooter />
