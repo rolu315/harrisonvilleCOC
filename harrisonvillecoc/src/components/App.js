@@ -11,6 +11,7 @@ import BugReportingForm from "./forms/bugReporting";
 import PrivacyPolicy from "./common/privacyPolicy/privacyPolicy";
 import ScrollToTop from "./common/scrollToTop/scrollToTop";
 import Articles from "./articles/articles";
+import SignInPage from "./adminPortal/signIn/signIn";
 
 function App() {
 	return (
@@ -27,6 +28,7 @@ function App() {
 					<Route path={ROUTES.BUGREPORTING} component={BugReportingForm} />
 					<Route path={ROUTES.PRIVACYPOLICY} component={PrivacyPolicy} />
 					<Route path={ROUTES.ARTICLES} component={Articles} />
+					<Route path={ROUTES.SIGN_IN} component={SignInPage} />
 				</div>
 			</ScrollToTop>
 		</Router>

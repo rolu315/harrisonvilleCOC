@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import { Button, Row } from "react-bootstrap";
-import * as firebase from "firebase";
-import "firebase/database";
-import Firebase from "../firebase/firebase";
+import { withFirebase } from "../Firebase/firebaseConfig";
 import styled from "styled-components";
+import * as firebase from "firebase";
+import "firebase/auth";
+import "firebase/database";
 import ReCAPTCHA from "react-google-recaptcha";
 import {
 	MDBNavbar,
@@ -47,7 +48,7 @@ const INITIAL_STATE = {
 	error: null,
 };
 const recaptchaRef = React.createRef();
-var db = firebase.firestore();
+let db = firebase.firestore();
 
 class BugReportingForm extends Component {
 	constructor(props) {

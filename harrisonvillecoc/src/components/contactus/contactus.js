@@ -3,8 +3,8 @@ import { Button, Row } from "react-bootstrap";
 import styled, { css } from "styled-components";
 import "./contactus.css";
 import * as firebase from "firebase";
+import "firebase/auth";
 import "firebase/database";
-import Firebase from "../firebase/firebase";
 import * as ROUTES from "../../constants/routes";
 import { withRouter } from "react-router";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -48,8 +48,8 @@ const INITIAL_STATE = {
 	error: null,
 };
 const recaptchaRef = React.createRef();
+let db = firebase.firestore();
 
-var db = firebase.firestore();
 
 class ContactForm extends Component {
 	constructor(props) {
@@ -58,7 +58,6 @@ class ContactForm extends Component {
 		this.verifyCallback = this.verifyCallback.bind(this);
 		this.state = { ...INITIAL_STATE, isVerified: false };
 	}
-
 	onSubmit = (event) => {
 		if (this.state.isVerified) {
 			event.preventDefault();
@@ -70,7 +69,7 @@ class ContactForm extends Component {
 					fullName: fullName,
 					email: email,
 					subject: subject,
-					message: message,
+					message: message
 				})
 				.then(() => {
 					(window.location = "/formSuccess").this

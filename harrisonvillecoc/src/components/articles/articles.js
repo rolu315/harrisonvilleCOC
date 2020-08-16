@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Button, Row } from "react-bootstrap";
 import * as firebase from "firebase";
+import "firebase/auth";
 import "firebase/database";
-import Firebase from "../firebase/firebase";
 import styled from "styled-components";
 import Pageheader from "../header/header";
 import Pagefooter from "../footer/footer";

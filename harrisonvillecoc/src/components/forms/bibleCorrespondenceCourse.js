@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import "./bibleCorrespondenceCourse.css";
 import * as firebase from "firebase";
+import "firebase/auth";
 import "firebase/database";
-import Firebase from "../firebase/firebase";
 import styled, { css } from "styled-components";
 import InputMask from "react-input-mask";
 import Pageheader from "../header/header";
@@ -49,8 +49,7 @@ const INITIAL_STATE = {
 	error: null,
 };
 const recaptchaRef = React.createRef();
-
-var db = firebase.firestore();
+let db = firebase.firestore();
 
 class BibleCorrespondenceCourse extends Component {
 	constructor(props) {
